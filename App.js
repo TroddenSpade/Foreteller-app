@@ -1,19 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {createSwitchNavigator,createAppContainer} from 'react-navigation';
+
+import Main from './src/Main.js';
+import Login from './src/login';
+
+const mainSwitchNavigator = createSwitchNavigator({
+  Main: Main,
+  Login: Login,
+},{
+  initialRouteName : "Main"
+});
+
+const Navigation = createAppContainer(mainSwitchNavigator);
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <Navigation/>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
