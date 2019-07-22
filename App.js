@@ -1,6 +1,8 @@
 import React from 'react';
 import {createSwitchNavigator,createAppContainer} from 'react-navigation';
+import { Provider } from 'react-redux';
 
+import Store from './src/redux/Store'
 import Main from './src/Main.js';
 import Login from './src/login';
 
@@ -15,6 +17,8 @@ const Navigation = createAppContainer(mainSwitchNavigator);
 
 export default function App() {
   return (
-    <Navigation/>
+    <Provider store={Store}>
+      <Navigation/>
+    </Provider>
   );
 }
