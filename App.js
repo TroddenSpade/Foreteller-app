@@ -5,9 +5,11 @@ import { Provider } from 'react-redux';
 import Store from './src/redux/Store'
 import Main from './src/Main.js';
 import Login from './src/login';
+import Body from './src/body/'
 
 const mainSwitchNavigator = createSwitchNavigator({
   Main: Main,
+  Body: Body,
   Login: Login,
 },{
   initialRouteName : "Main"
