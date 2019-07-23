@@ -17,6 +17,7 @@
     "react-navigation": "^3.11.1",
     "react-redux": "^7.1.0",
     "redux": "^4.0.4",
+    "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
