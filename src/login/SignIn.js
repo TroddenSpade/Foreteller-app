@@ -12,6 +12,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import { signIn } from '../redux/actions/Login';
+import { setToken } from '../utils/misc';
 
 class SignIn extends React.Component {
   state = {
@@ -43,7 +44,13 @@ class SignIn extends React.Component {
           email: this.state.email.trim().toLowerCase(),
           password: this.state.password
         };
-        this.props.signIn(data);
+        this.props.signIn(data,
+          data => {
+            if (this.state.autoSignIn) {
+              setToken(data.user);
+            }
+          }  
+        );
       }
     }
   };
