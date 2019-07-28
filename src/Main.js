@@ -2,14 +2,13 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { getToken } from './utils/misc'
+import { getToken, removeToken } from './utils/misc'
 import { checkToken } from './redux/actions/Login'
 import Loading from './components/Loading';
 
 class Main extends React.Component{
     async componentWillMount(){
         const data = await getToken();
-        console.log(data)
         if(data){
             this.props.checkToken(data);
         }else{
@@ -18,7 +17,6 @@ class Main extends React.Component{
     }
 
     componentWillReceiveProps(props) {
-        console.log(props,"props");
         if (props.Login._id) {
             this.props.navigation.navigate("Body");
         } else {
