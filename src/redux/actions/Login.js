@@ -23,6 +23,7 @@ export const signIn=(data,sCB)=>{
         axios.post(SIGN_IN_ADD,data)
         .then(response=>{
             if(response.data.isAuth){
+                console.log(response)
                 dispatch({type:SAVE_USER,payload:response.data})
                 sCB(response.data);
             }else{
