@@ -64,7 +64,10 @@ export default createStackNavigator({
         }
     },
     CreatePoll: {
-        screen: CreatePoll
+        screen: CreatePoll,
+        navigationOptions: {
+            header: null,
+        }
     },
 },{
     initialRouteName: "BottomTabNavigator",
