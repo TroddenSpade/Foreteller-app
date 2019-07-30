@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>27418D9F-21AA-4774-A74B-5141CB26B0DD</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>27418D9F-21AA-4774-A74B-5141CB26B0DD.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Foreteller project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Foreteller</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace Foreteller with scheme Foreteller and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>586210766.24657202</real>
+			<key>timeStoppedRecording</key>
+			<real>586210769.53904605</real>
+			<key>title</key>
+			<string>Building workspace Foreteller with scheme Foreteller and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>27418D9F-21AA-4774-A74B-5141CB26B0DD</string>
+		</dict>
+		<key>913EB7A0-2C6B-43B3-B3C7-4AE32A0A718A</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>913EB7A0-2C6B-43B3-B3C7-4AE32A0A718A.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Foreteller project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Foreteller</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace Foreteller with scheme Foreteller and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>586211475.57808805</real>
+			<key>timeStoppedRecording</key>
+			<real>586211476.50490606</real>
+			<key>title</key>
+			<string>Building workspace Foreteller with scheme Foreteller and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>913EB7A0-2C6B-43B3-B3C7-4AE32A0A718A</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

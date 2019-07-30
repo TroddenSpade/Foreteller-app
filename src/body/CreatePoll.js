@@ -1,9 +1,10 @@
 import React from 'react';
-import { View,Text,TouchableOpacity,TextInput,StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
-import { FontAwesome, Feather, AntDesign } from "@expo/vector-icons";
+import { View,Text,TouchableOpacity,TextInput,StyleSheet,StatusBar,SafeAreaView } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Feather from 'react-native-vector-icons/Feather';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 class CreatePoll extends React.Component{
     state={
@@ -74,8 +75,7 @@ class CreatePoll extends React.Component{
 
     render(){
         return(
-            <View style={styles.container}> 
-                <View style={styles.blank}/>
+            <SafeAreaView style={styles.container}> 
                 <View style={styles.header}>
                     <TouchableOpacity onPress={()=>this.props.navigation.goBack()}>
                         <Feather name="chevron-left" color={'grey'} size={40} />
@@ -117,7 +117,7 @@ class CreatePoll extends React.Component{
                             {this.newOptions()}
                     </View>
                 </View>
-            </View> 
+            </SafeAreaView> 
         )
     }
 
@@ -143,12 +143,7 @@ export default connect(mapStateToProps,mapDispatchToProps)(CreatePoll);
 
 const styles = StyleSheet.create({
     container:{
-        flexDirection:'column',
-        flex:1
-    },
-    blank:{
-        height:Constants.statusBarHeight,
-        backgroundColor: 'white',
+        flex: 1,
     },
     header:{
         flexDirection: "row",

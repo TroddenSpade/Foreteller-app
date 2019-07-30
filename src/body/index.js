@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet } from 'react-native'
 import { createBottomTabNavigator,createStackNavigator } from 'react-navigation';
-import { Entypo, Foundation, FontAwesome } from "@expo/vector-icons";
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Foundation from 'react-native-vector-icons/Foundation';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 import TabBar from './TabBar';
 import Home from './Home';

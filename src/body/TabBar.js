@@ -1,9 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity,Dimensions } from "react-native";
-import {SafeAreaView } from 'react-navigation';
-import { Entypo, AntDesign } from "@expo/vector-icons";
-
-
+import { View, StyleSheet, TouchableOpacity,Dimensions } from "react-native";
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import { SafeAreaView } from 'react-navigation';
 export default class TabBar extends React.Component {
   state = {
     color: 1
@@ -44,8 +42,8 @@ export default class TabBar extends React.Component {
         style={styles.container}
       >
         <View style={styles.cover}>
-        {this.createButton(this.props.navigation.state.routes[0],0)}
-        {this.createButton(this.props.navigation.state.routes[1],1)}
+          {this.createButton(this.props.navigation.state.routes[0],0)}
+          {this.createButton(this.props.navigation.state.routes[1],1)}
           <View style={styles.blank}/>
             
           <TouchableOpacity
@@ -71,7 +69,7 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "flex-end",
     borderTopWidth:1,
-    borderTopColor:"lightgrey"
+    borderTopColor:"lightgrey",
   },
   cover: {
     backgroundColor: "white",
