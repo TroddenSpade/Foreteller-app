@@ -23,11 +23,11 @@ target 'Foreteller' do
   pod 'React-jsiexecutor', :path => '../node_modules/react-native/ReactCommon/jsiexecutor'
   pod 'React-jsinspector', :path => '../node_modules/react-native/ReactCommon/jsinspector'
   pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
 
   target 'ForetellerTests' do

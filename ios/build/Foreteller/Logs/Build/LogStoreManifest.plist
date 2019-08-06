@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>27418D9F-21AA-4774-A74B-5141CB26B0DD</key>
+		<key>CA7AF9EC-E25D-4DA7-931B-F3231997DB51</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,11 +15,11 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>27418D9F-21AA-4774-A74B-5141CB26B0DD.xcactivitylog</string>
+			<string>CA7AF9EC-E25D-4DA7-931B-F3231997DB51.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>E</string>
+				<string>W</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>Foreteller project</string>
@@ -30,15 +30,15 @@
 			<key>signature</key>
 			<string>Building workspace Foreteller with scheme Foreteller and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>586210766.24657202</real>
+			<real>586701096.79075098</real>
 			<key>timeStoppedRecording</key>
-			<real>586210769.53904605</real>
+			<real>586701104.89983201</real>
 			<key>title</key>
 			<string>Building workspace Foreteller with scheme Foreteller and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>27418D9F-21AA-4774-A74B-5141CB26B0DD</string>
+			<string>CA7AF9EC-E25D-4DA7-931B-F3231997DB51</string>
 		</dict>
-		<key>913EB7A0-2C6B-43B3-B3C7-4AE32A0A718A</key>
+		<key>D8BE169A-B789-45D2-8FB2-2688A84E6AA1</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -47,11 +47,11 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>913EB7A0-2C6B-43B3-B3C7-4AE32A0A718A.xcactivitylog</string>
+			<string>D8BE169A-B789-45D2-8FB2-2688A84E6AA1.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>E</string>
+				<string>W</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>Foreteller project</string>
@@ -62,13 +62,13 @@
 			<key>signature</key>
 			<string>Building workspace Foreteller with scheme Foreteller and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>586211475.57808805</real>
+			<real>586724786.89327097</real>
 			<key>timeStoppedRecording</key>
-			<real>586211476.50490606</real>
+			<real>586724796.92116106</real>
 			<key>title</key>
 			<string>Building workspace Foreteller with scheme Foreteller and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>913EB7A0-2C6B-43B3-B3C7-4AE32A0A718A</string>
+			<string>D8BE169A-B789-45D2-8FB2-2688A84E6AA1</string>
 		</dict>
 	</dict>
 </dict>
