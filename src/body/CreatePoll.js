@@ -2,9 +2,12 @@ import React from 'react';
 import { View,Text,TouchableOpacity,TextInput,StyleSheet,StatusBar,SafeAreaView } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Slider from '@react-native-community/slider';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+
+import { createPoll } from '../redux/actions/Poll';
 
 class CreatePoll extends React.Component{
     state={
@@ -17,6 +20,12 @@ class CreatePoll extends React.Component{
             3:'',
             4:''
         }
+    }
+
+    send = ()=>{
+        this.props.createPoll(this.state,()=>{
+            this.props.navigation.goBack();
+        });
     }
 
     newOptions = ()=>{
@@ -40,7 +49,14 @@ class CreatePoll extends React.Component{
                         maxLength={50}
                         placeholder="3"
                         style={styles.optionBottom}
-                        onChangeText={subject => this.setState({ subject })}
+                        onChangeText={str => 
+                            this.setState(prevState => ({
+                                options:{
+                                    ...prevState.options,
+                                    3:str,
+                                }
+                            }))
+                        } 
                     />
                     <TouchableOpacity style={styles.optionBottom}
                         onPress={()=>this.setState({
@@ -59,14 +75,28 @@ class CreatePoll extends React.Component{
                         maxLength={50}
                         placeholder="3"
                         style={styles.optionBottom}
-                        onChangeText={subject => this.setState({ subject })}
+                        onChangeText={str => 
+                            this.setState(prevState => ({
+                                options:{
+                                    ...prevState.options,
+                                    3:str,
+                                }
+                            }))
+                        }                  
                     />
                     <TextInput
                         multiline={true}
                         maxLength={50}
                         placeholder="4"
                         style={styles.optionBottom}
-                        onChangeText={subject => this.setState({ subject })}
+                        onChangeText={str => 
+                            this.setState(prevState => ({
+                                options:{
+                                    ...prevState.options,
+                                    4:str,
+                                }
+                            }))
+                        }                    
                     />
                 </View>
             )
@@ -80,7 +110,7 @@ class CreatePoll extends React.Component{
                     <TouchableOpacity onPress={()=>this.props.navigation.goBack()}>
                         <Feather name="chevron-left" color={'grey'} size={40} />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.send}  onPress={() =>console.log('send')}>
+                    <TouchableOpacity style={styles.send}  onPress={this.send}>
                         <Text style={styles.text}> Send </Text>
                         <FontAwesome name="send" color={'grey'} size={25} />
                     </TouchableOpacity>
@@ -104,17 +134,47 @@ class CreatePoll extends React.Component{
                                 maxLength={50}
                                 placeholder="1"
                                 style={styles.optionTop}
-                                onChangeText={subject => this.setState({ subject })}
+                                onChangeText={str => 
+                                    this.setState(prevState => ({
+                                        options:{
+                                            ...prevState.options,
+                                            1:str,
+                                        }
+                                    }))
+                                }
                             />
                             <TextInput
                                 multiline={true}
                                 maxLength={50}
                                 placeholder="2"
                                 style={styles.optionTop}
-                                onChangeText={subject => this.setState({ subject })}
+                                onChangeText={str => 
+                                    this.setState(prevState => ({
+                                        options:{
+                                            ...prevState.options,
+                                            2:str,
+                                        }
+                                    }))
+                                }
                             />
                         </View>
                             {this.newOptions()}
+                    </View>
+                    <View style={styles.sliderBody}>
+                        <Slider
+                            style={{width: 200, height: 40}}
+                            minimumValue={0}
+                            maximumValue={100}
+                            minimumTrackTintColor="grey"
+                            maximumTrackTintColor="lightgrey"
+                            onValueChange={(point)=>{
+                                this.setState({
+                                    point
+                                })
+                            }}
+                            step={1}
+                        />
+                        <Text>{this.state.point}</Text>
                     </View>
                 </View>
             </SafeAreaView> 
@@ -136,7 +196,7 @@ const mapStateToProps = (state)=>{
 }
 
 const mapDispatchToProps = (dispatch)=>{
-    return bindActionCreators({},dispatch);
+    return bindActionCreators({createPoll},dispatch);
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(CreatePoll);
@@ -148,7 +208,6 @@ const styles = StyleSheet.create({
     header:{
         flexDirection: "row",
         height:45,
-        backgroundColor: 'white',
         justifyContent:'space-between',
         alignItems:'center',
         borderBottomWidth:1,
@@ -173,7 +232,6 @@ const styles = StyleSheet.create({
     subjectBody:{
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:'red',
         height: '30%',
         width: '100%',
     },
@@ -188,7 +246,6 @@ const styles = StyleSheet.create({
         borderLeftColor:'lightgrey'
     },
     options:{
-        backgroundColor:'green',
         justifyContent:'center',
         height:'30%',
         width:'100%'
@@ -222,4 +279,11 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-around'
     },
+    sliderBody:{
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems:'center',
+        height:'20%',
+        width:'100%',
+    }
 });
